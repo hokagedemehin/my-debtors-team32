@@ -1,8 +1,10 @@
 # DMA Project Team 32
 
-This is the Github repo for Team 32 on the debtors web application. This project is a platform that allows schools in a certain locality list directory of people owing them - to help them avoid going to other schools.
 
-## Frontend & Backend Workflow 🍃
+
+This is the Github repo for Team 32 on the debtors web application. This project is a platform that allows schools in a certain locality list directory of people owing them - to help them avoid going to other schools. This service is a **Microservice web application**. The frontend was developed with **React.js** and Backend was developed developed using **Django**.
+
+## Frontend Workflow 🍃
 
 1. Clone the repo and open the project on your prefered code editor
    `git clone https://github.com/zuri-training/my-debtors-team32.git`
@@ -42,3 +44,20 @@ git push origin <type_your_new_branch_name_here>
 ```
 
 - If you have any merge conflict, you can watch this [video](https://screencast-o-matic.com/watch/c3iuloVZ0Wb) on how you can resolve them. Also the same video will show you to make a Pull Request to the repo. Please follow every instruction stated in this [video](https://screencast-o-matic.com/watch/c3iuloVZ0Wb)
+
+## Backend WorkFlow
+1. Clone the repo with this link `https://github.com/zuri-training/my-debtors-team32.git` and open in a code editor.
+
+2. Change directory to the backend directory
+   `cd DMA_backend`
+
+3. Create a virtual environment and type
+   `python -m pip install -r requirements.txt`
+
+4. Set up database with PostgreSQL or Sqlite3. Change the database in DMA/settings to run data base of your choice. 
+   For production, **PostgreSQL** is preferred.
+
+5. Start development server
+   `python manage.py runserver`
+
+To view API Endpoints type `127.0.0.1:800/docs/` 

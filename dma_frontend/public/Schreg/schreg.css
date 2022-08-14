@@ -1,0 +1,86 @@
+.first-reg {
+  text-align: center;
+  color: #0a5694;
+}
+
+.Reg-form {
+  padding-left: 30px;
+  padding-top: 50px;
+}
+
+.reg-parent,
+.reg-description,
+.reg-schaddress,
+.reg-contact,
+.reg-email,
+.reg-cat {
+  width: 500px;
+  height: 30px;
+  border: 1px solid #484747c4;
+  border-radius: 8px;
+}
+
+.reg-doc {
+  display: flex;
+  gap: 50px;
+}
+
+.reg-title {
+  padding-left: 190px;
+}
+
+#sch-certificate {
+  width: 300px;
+  height: 30px;
+  border: 1px solid #484747c4;
+  border-radius: 8px;
+}
+
+.reg-btn01 {
+  background-color: #0a5694;
+  color: white;
+  width: 300px;
+  height: 50px;
+  border-radius: 8px;
+  margin-left: 190px;
+  margin-bottom: 30px;
+}
+
+#next-nav {
+  color: #0a5694;
+  text-decoration: none;
+  float: right;
+  padding-right: 40px;
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 280px) and (max-width: 800px) {
+  .reg-parent,
+  .reg-description,
+  .reg-schaddress,
+  .reg-contact,
+  .reg-email,
+  .reg-cat {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #484747c4;
+    border-radius: 8px;
+  }
+
+  #sch-certificate {
+    width: 220px;
+    height: 30px;
+    border: 1px solid #484747c4;
+    border-radius: 8px;
+  }
+
+  .reg-btn01 {
+    background-color: #0a5694;
+    color: white;
+    width: 220px;
+    height: 50px;
+    border-radius: 8px;
+    margin-left: 190px;
+    margin-bottom: 30px;
+  }
+}
