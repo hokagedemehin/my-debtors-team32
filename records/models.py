@@ -51,8 +51,8 @@ class RegistrationClass(models.Model):
     proprietor_email = models.EmailField(max_length=250, blank=True, null=True)
     proprietor_number = models.CharField(max_length=250, blank=True, null=True)
     principal_name = models.CharField(max_length=250, blank=True, null=True)
-    proprietor_email = models.EmailField(blank=True, null=True)
-    proprietor_number = models.CharField(max_length=250, blank=True, null=True)
+    principal_email = models.EmailField(blank=True, null=True)
+    principal_number = models.CharField(max_length=250, blank=True, null=True)
     bursar_name = models.CharField(max_length=250, blank=True, null=True)
     bursar_email = models.EmailField(blank=True, null=True)
     bursar_number = models.CharField(max_length=250, blank=True, null=True)
@@ -64,3 +64,10 @@ class RegistrationClass(models.Model):
 
     def __str__(self):
         return self.school_name
+
+
+class AddDebtors(models.Model):
+    school = models.ForeignKey(RegistrationClass, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    studentName = models.CharField(max_length=300)
+    parentName = models.CharField(max_length=300)
