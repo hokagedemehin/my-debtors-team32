@@ -1,7 +1,7 @@
 from rest_framework import generics, viewsets
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 from .permissions import IsOwnerOrReadOnly
-from .models import Records
+from .models import Records, RegistrationClass
 from .serializers import RecordSerializer, UserSerializer, RegistrationSerializer
 from django.contrib.auth import get_user_model
 from rest_framework import filters
