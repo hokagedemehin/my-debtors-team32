@@ -49,7 +49,7 @@ class Records(models.Model):
     )
 
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    school = models.ForeignKey(RegistrationClass, on_delete=models.CASCADE)
+    # school = models.ForeignKey(RegistrationClass, on_delete=models.CASCADE)
     name_of_student = models.CharField(max_length=50)
     name_of_parent = models.CharField(max_length=50)
     email = models.EmailField()
