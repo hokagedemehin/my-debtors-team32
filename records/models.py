@@ -71,7 +71,7 @@ class Records(models.Model):
 
 class ContendForm(models.Model):
     post = models.ForeignKey(Records, on_delete=models.CASCADE, related_name="contend")
-    school = models.ForeignKey(RegistrationClass, on_delete=models.CASCADE)
+    
     name = models.ForeignKey(User, on_delete=models.CASCADE)
     message = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
