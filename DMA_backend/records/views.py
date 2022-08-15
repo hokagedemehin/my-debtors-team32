@@ -1,7 +1,7 @@
 from rest_framework import generics, viewsets
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 from .permissions import IsOwnerOrReadOnly
-from .models import Records
+from .models import Records, RegistrationClass, ContendForm
 from .serializers import RecordSerializer, UserSerializer, RegistrationSerializer
 from django.contrib.auth import get_user_model
 from rest_framework import filters
@@ -42,3 +42,6 @@ class SchoolInfo(viewsets.ReadOnlyModelViewSet):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = get_user_model().objects.all()
     serializer_class = UserSerializer
+
+class ContendView(viewsets.ModelViewSet):
+    queryset = ContendForm

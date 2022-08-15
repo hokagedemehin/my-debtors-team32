@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import RecordSearchFilter, UserViewSet, RecordView, Registration, SchoolInfo
+from .views import ContendView, RecordSearchFilter, UserViewSet, RecordView, Registration, SchoolInfo
 from rest_framework.routers import SimpleRouter
 
 
@@ -11,6 +11,7 @@ router.register('register', Registration, basename='users')
 router.register('school', SchoolInfo, basename='users')
 router.register('search', RecordSearchFilter, basename='search')
 router.register('dashboard', RecordView, basename='posts')
+router.register('contend', ContendView, basename='contend')
 
 urlpatterns = router.urls
 

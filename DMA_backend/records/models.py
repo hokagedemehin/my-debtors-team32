@@ -62,3 +62,17 @@ class RegistrationClass(models.Model):
 
     def __str__(self):
         return self.school_name
+
+
+class ContendForm(models.Model):
+    post = models.ForeignKey(Records, delete=models.CASCADE, related_name='contend')
+    school = models.ForeignKey(RegistrationClass)
+    name = models.ForeignKey(User)
+    message = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return 'Message by {}'.format(self.name)

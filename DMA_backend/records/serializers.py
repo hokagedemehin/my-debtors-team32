@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Records, RegistrationClass
+from .models import ContendForm, Records, RegistrationClass
 from django.contrib.auth import get_user_model
 
 class RecordSerializer(serializers.ModelSerializer):
@@ -20,3 +20,9 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = get_user_model()
         fields = ('id', 'username',)
+
+
+class ContendSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ContendForm
+        fields = '__all__'
