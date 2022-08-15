@@ -55,8 +55,10 @@ class Records(models.Model):
     email = models.EmailField()
     slug = models.SlugField(max_length=50)
     school_owed = models.CharField(max_length=250)
+    phone_number = models.CharField(max_length=25, blank=True, null=True)
     amount_owed = models.IntegerField()
     status = models.CharField(max_length=20, choices=options)
+    evidence = models.CharField(max_length=550, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
